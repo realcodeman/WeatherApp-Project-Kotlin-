@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:background="@color/solid_white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:id="@+id/row1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/weatherIcon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_rain"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:id="@+id/weatherTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday"
+            android:textSize="20dp"
+            android:textColor="#333333"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_toRightOf="@id/weatherIcon"/>
+        <TextView
+            android:id="@+id/weatherDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today"
+            android:textSize="14dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="@color/solidGreen"
+            android:layout_below="@id/weatherTemp"
+            android:layout_alignLeft="@id/weatherTemp"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline">
+
+        <TextView
+            android:id="@+id/dailyTemp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="62°F"
+            android:textSize="20dp"
+            android:textColor="#333333"
+            android:layout_marginRight="10dp"
+            android:fontFamily="@font/nunito_bold" />
+        <TextView
+            android:id="@+id/dailyWeatherDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dark clouds"
+            android:textSize="14dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="#99828282"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/dailyTemp"/>
+
+
+    </RelativeLayout>
+    <View
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/row1"
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EFEFEF"/>
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintRight_toLeftOf="@id/guideline">
+        <ImageView
+            android:id="@+id/tempIcon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_temp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature"
+            android:textSize="14dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="#4F4F4F"
+            android:layout_toRightOf="@id/tempIcon" />
+        <TextView
+            android:id="@+id/tempDegrees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="62°F"
+            android:textSize="14dp"
+            android:textColor="#99828282"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_below="@id/temp"
+            android:layout_alignLeft="@id/temp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/secondRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline">
+        <ImageView
+            android:id="@+id/pressureIcon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_wind"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/pressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pressure"
+            android:textSize="14dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="#4F4F4F"
+            android:layout_toRightOf="@id/pressureIcon"/>
+        <TextView
+            android:id="@+id/pressureBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="62°F"
+            android:textSize="14dp"
+            android:layout_alignLeft="@id/pressure"
+            android:layout_below="@id/pressure"
+            android:textColor="#99828282"
+            android:fontFamily="@font/nunito_bold"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/secondRow"
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EFEFEF"/>
+
+    <RelativeLayout
+        android:id="@+id/thirdRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline">
+        <ImageView
+            android:id="@+id/humidityIcon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_wind"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:id="@+id/humidityPercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="62°F"
+            android:textSize="20dp"
+            android:textColor="#99828282"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_below="@id/humidity"
+            android:layout_alignLeft="@id/humidity" />
+        <TextView
+            android:id="@+id/humidity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity"
+            android:textSize="14dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:textColor="#4F4F4F"
+
+            android:layout_toRightOf="@id/humidityIcon"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/line2"
+        app:layout_constraintRight_toLeftOf="@id/guideline">
+        <ImageView
+            android:id="@+id/windIcon"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_temp"
+            android:layout_marginRight="10dp"/>
+        <TextView
+            android:id="@+id/windSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="62°F"
+            android:textSize="20dp"
+            android:textColor="#99828282"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_below="@id/wind"
+            android:layout_alignLeft="@id/wind"/>
+        <TextView
+            android:id="@+id/wind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wind"
+            android:textSize="14dp"
+            android:fontFamily="@font/nunito_semibold"
+            android:layout_toRightOf="@id/windIcon"
+            android:textColor="#4F4F4F" />
+
+
+    </RelativeLayout>
+
+    <View
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/thirdRow"
+        android:id="@+id/line3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EFEFEF"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/forecastList"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line3"
+        tools:listitem="@layout/hourly_forecast_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

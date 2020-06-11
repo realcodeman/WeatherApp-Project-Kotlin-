@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/solid_white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:paddingBottom="20dp">
+        <TextView
+            android:id="@+id/title_nextweek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="28dp"
+            android:layout_marginRight="28dp"
+            android:layout_marginLeft="28dp"
+            android:textColor="@color/gray1"
+            android:gravity="left"
+            android:textSize="24dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Here’s how the rest of\nthe week is looking"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/forecastList"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_nextweek"
+            tools:listitem="@layout/next_week_item" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
