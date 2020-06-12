@@ -1,121 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/solid_green">
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/rootView"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".MainActivity"
-    android:paddingTop="55dp"
-    >
-    <EditText
-        android:id="@+id/search_viewEditText"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginRight="28dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:background="@drawable/curved_rectangle"
-        android:hint="Enter any City"
-        android:fontFamily="@font/nunito"
-        android:textSize="16dp"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:drawableLeft="@drawable/ic_search"
-        android:drawablePadding="10dp"
-        android:inputType="textCapWords"
-        android:imeOptions="actionSearch"
-        android:singleLine="true"
-        android:maxLines="1"
-        android:elevation="10dp"
-        />
 
-    <TextView
-        android:id="@+id/city_nameTextView"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/rootView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginRight="28dp"
-        android:text="Lagos,Ikeja"
-        android:textColor="@color/solid_white"
-        android:textSize="24dp"
-        app:fontFamily="@font/nunito_bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search_viewEditText" />
-    <TextView
-        android:id="@+id/dateTextView"
+        android:paddingTop="55dp"
+        tools:context=".MainActivity">
+
+        <EditText
+            android:id="@+id/search_viewEditText"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginRight="28dp"
+            android:background="@drawable/curved_rectangle"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="10dp"
+            android:elevation="10dp"
+            android:fontFamily="@font/nunito"
+            android:hint="Enter any City"
+            android:imeOptions="actionSearch"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="15dp"
+            android:singleLine="true"
+            android:textSize="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/city_nameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="28dp"
+            android:text="Lagos,Ikeja"
+            android:textColor="@color/solid_white"
+            android:textSize="24dp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_viewEditText" />
+
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="28dp"
+            android:text="Monday, October 31, 2020"
+            android:textColor="@color/darker_white"
+            android:textSize="14dp"
+            app:fontFamily="@font/nunito_bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/city_nameTextView" />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateTextView"
+            app:tabBackground="@color/solid_green"
+            app:tabIndicator="@color/solid_white"
+            app:tabPaddingBottom="0dp"
+            app:tabPaddingEnd="0dp"
+            app:tabPaddingStart="0dp"
+            app:tabPaddingTop="0dp"
+            app:tabSelectedTextColor="@color/solid_white"
+            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+            app:tabTextColor="@color/darker_white">
+
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tommorow" />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This Week" />
+
+        </com.google.android.material.tabs.TabLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginRight="28dp"
-        android:text="Monday, October 31, 2020"
-        android:textColor="@color/darker_white"
-        android:textSize="14dp"
-        app:fontFamily="@font/nunito_bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/city_nameTextView"/>
+        android:layout_height="match_parent"
+        android:layout_below="@id/rootView"
+        android:background="@drawable/curvedviewpager">
 
-
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabs"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        app:tabTextColor="@color/darker_white"
-        app:tabIndicator="@color/solid_white"
-        app:tabBackground="@color/solid_green"
-        app:tabPaddingBottom="0dp"
-        app:tabPaddingEnd="0dp"
-        app:tabPaddingStart="0dp"
-        app:tabPaddingTop="0dp"
-        app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:tabSelectedTextColor="@color/solid_white"
-        app:layout_constraintTop_toBottomOf="@id/dateTextView">
-
-
-
-
-        <com.google.android.material.tabs.TabItem
-            android:text="Today"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"/>
-        <com.google.android.material.tabs.TabItem
-            android:text="Tommorow"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"/>
-        <com.google.android.material.tabs.TabItem
-            android:text="This Week"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"/>
-
-    </com.google.android.material.tabs.TabLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
-   <androidx.core.widget.NestedScrollView
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:layout_below="@id/rootView"
-       android:background="@drawable/curvedviewpager">
-
-<!--    <androidx.viewpager.widget.ViewPager-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        />-->
-   </androidx.core.widget.NestedScrollView>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </androidx.core.widget.NestedScrollView>
 </RelativeLayout>

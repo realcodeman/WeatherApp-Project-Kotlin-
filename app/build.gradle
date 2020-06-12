@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
@@ -8,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.andriod.weatherappkotlin"
-        minSdkVersion 15
+        minSdkVersion 24
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -34,5 +35,58 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //architecture components
+    implementation 'androidx.lifecycle:lifecycle-common-java8:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel:2.0.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime:2.0.0'
+
+    implementation 'com.google.android.material:material:1.0.0'
+
+    //retrofit for network class
+    implementation('com.squareup.retrofit2:retrofit:2.4.0') { exclude module: 'okhttp' }
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+
+    //glide for image loading
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+
+    //okhttp
+    //implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.9.1'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.3'
+    // implementation 'com.squareup.okio:okio:1.13.0'
+
+    //rxjava for reactive programming
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.1'
+
+
+
+    //json converter and serializer
+    implementation 'com.google.code.gson:gson:2.8.0'
+
+
+
+    //dagger2 for dependency  injection
+    implementation 'com.google.dagger:dagger:2.17'
+    implementation 'com.google.dagger:dagger-android:2.17'
+    implementation 'com.google.dagger:dagger-android-support:2.17'
+    annotationProcessor 'com.google.dagger:dagger-android-processor:2.17'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.17'
+    kapt 'com.google.dagger:dagger-android-processor:2.17'
+    kapt 'com.google.dagger:dagger-compiler:2.17'
+
+    //circle imageView
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+
+    //room for database persistence
+    implementation 'androidx.room:room-rxjava2:2.1.0'
+    testImplementation 'androidx.room:room-testing:2.1.0'
+    implementation 'androidx.room:room-runtime:2.1.0'
+    annotationProcessor 'androidx.room:room-compiler:2.1.0'
+    kapt 'androidx.room:room-compiler:2.1.0'
 
 }
